@@ -2,29 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Portfolio - Wesley Wolfe</title>
-
-    <style>
-        #cover {
-            background-color: #160F29;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            height: 100svh;
-        }
-    </style>
-    <link rel="stylesheet" href="/index.css">
-    
+    <title>Digital Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="flipbook.css">
 </head>
 <body>
-    <div id="cover"></div>
+    <div class="book">
+        <input type="checkbox" id="c1" autocomplete="off">
+        <input type="checkbox" id="c2" autocomplete="off">
+        <input type="checkbox" id="c3" autocomplete="off">
+        <div id="cover">
+            <!-- Page 1 Left -->
+            <img src="https://images.pexels.com/photos/7214434/pexels-photo-7214434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
 
-    <h1>Digital Portfolio - CtNC</h1>
-    <h2>by Wesley Wolfe</h2>
+        </div>
+        <div class="flip-book test">
+            <div class="flip" id="p1">
+                <!-- Page 2 Left -->
+                <div class="back">
+                    <img src="https://images.pexels.com/photos/1114797/pexels-photo-1114797.jpeg?cs=srgb&dl=pexels-angele-j-1114797.jpg&fm=jpg" alt="">
+                    <label  for="c1" class="back-btn">Before</label>
+                </div>
+                <!-- Page 1 Right -->
+                <div class="front">
+                    <h2>Apple</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!
 
-    <a href="./questions/q1.html">Question 1</a>
+                        <button onclick="skipTo(2)">Go to 2</button>
+                        <button onclick="skipTo(3)">Go to 3</button>
+                    </p>
+                    <label for="c1" class="next-btn">NEXT</label>
+                </div>
+            </div>
+
+            <div class="flip" id="p2">
+                <!-- Page 3 Left -->
+                <div class="back">
+                    <img src="https://images.pexels.com/photos/1998630/pexels-photo-1998630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <label for="c2" class="back-btn">Before</label>
+                </div>
+                <!-- Page 2 Right -->
+                <div class="front">
+                    <h2>Orange</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!</p>
+                    <label for="c2" class="next-btn">NEXT</label>
+                </div>
+            </div>
+            
+            <div class="flip" id="p3">
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <h2>Strawberry</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+   
+    <script>
+        function skipTo (num) {
+            checks = document.querySelectorAll('input[type="checkbox"]');
+            for (let i  = 0; i < checks.length; i++) {
+                if (i < num - 1) {
+                    checks[i].checked = true;
+                } else {
+                    checks[i].checked = false;
+                }
+            }
+        }
+    </script>
+    
 </body>
 </html>
