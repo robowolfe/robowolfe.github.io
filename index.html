@@ -7,31 +7,75 @@
     <title>Digital Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="flipbook.css">
+
+    <link rel="stylesheet" href="pylr.css">
 </head>
 <body>
+    <style>
+        #cover {
+            font-size:2vw;
+            font-size:clamp(2rem, 5vw, 3.1rem);
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 1;
+        }
+        #cover header {
+            margin-top:-1rem;
+        }
+        #cover h1 {
+            font-size:inherit;
+        }
+        #cover p {
+            margin-top:1rem;
+            font-size:clamp(1.5rem, 1vw, 2rem);
+            opacity:0.8;
+        }
+    </style>
+
+    <style>
+        h2 {
+            font-size:2.5rem;
+            text-wrap: balance;
+        }
+    </style>
+
     <div class="book">
         <input type="checkbox" id="c1" autocomplete="off">
         <input type="checkbox" id="c2" autocomplete="off">
         <input type="checkbox" id="c3" autocomplete="off">
         <div id="cover">
             <!-- Page 1 Left -->
-            <img src="https://images.pexels.com/photos/7214434/pexels-photo-7214434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-
+            <!-- <img src="https://images.pexels.com/photos/7214434/pexels-photo-7214434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
+            <header>
+                <h1>
+                <div class="crea">Creation</div>
+                <div class="hr">to</div>
+                <div class="new-crea">New Creation</div>
+                </h1>
+                <p>digital portfolio</p>
+            </header>
         </div>
-        <div class="flip-book test">
+        <div class="flip-book">
             <div class="flip" id="p1">
                 <!-- Page 2 Left -->
                 <div class="back">
-                    <img src="https://images.pexels.com/photos/1114797/pexels-photo-1114797.jpeg?cs=srgb&dl=pexels-angele-j-1114797.jpg&fm=jpg" alt="">
-                    <label  for="c1" class="back-btn">Before</label>
+                    <h2>How the <span style="color:var(--purple)">Bible</span> Comes to Us</h2>
+                    <!-- <img src="https://images.pexels.com/photos/1114797/pexels-photo-1114797.jpeg?cs=srgb&dl=pexels-angele-j-1114797.jpg&fm=jpg" alt=""> -->
+                    <label for="c1" class="back-btn">Before</label>
                 </div>
                 <!-- Page 1 Right -->
                 <div class="front">
-                    <h2>Apple</h2>
+                    <h2>Table of Contents:</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!
 
-                        <button onclick="skipTo(2)">Go to 2</button>
-                        <button onclick="skipTo(3)">Go to 3</button>
+                        <ul>
+                            <li><button onclick="flipTo(2)">How the Bible Comes to Us</button></li>
+                        </ul>
+                        <button onclick="flipTo(2)">Go to 2</button>
+                        <button onclick="flipTo(3)">Go to 3</button>
                     </p>
                     <label for="c1" class="next-btn">NEXT</label>
                 </div>
@@ -40,12 +84,12 @@
             <div class="flip" id="p2">
                 <!-- Page 3 Left -->
                 <div class="back">
-                    <img src="https://images.pexels.com/photos/1998630/pexels-photo-1998630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <!-- <img src="https://images.pexels.com/photos/1998630/pexels-photo-1998630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
                     <label for="c2" class="back-btn">Before</label>
                 </div>
                 <!-- Page 2 Right -->
                 <div class="front">
-                    <h2>Orange</h2>
+                    <h2>Question 2</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!</p>
                     <label for="c2" class="next-btn">NEXT</label>
                 </div>
@@ -54,8 +98,12 @@
             <div class="flip" id="p3">
                 <!-- Page 3 Right -->
                 <div class="front">
-                    <h2>Strawberry</h2>
+                    <h2>Podcast</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!</p>
+                    <!-- <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio> -->
+                    <audio class="plyr__video-embed" id="player" controls>
+                        <source src="https://cdn.plyr.io/static/demo/Kishi_Bashi_-_It_All_Began_With_a_Burst.mp3" type="audio/mp3" />
+                    </audio>
                 </div>
             </div>
 
@@ -73,6 +121,41 @@
                 }
             }
         }
+
+        function flipTo (num) {
+            curPage = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).length + 1;
+            
+            checks = document.querySelectorAll('input[type="checkbox"]');
+
+            timeToFlip = 1000;
+            timePerPage = timeToFlip / checks.length;
+            
+            difference = num - curPage;
+            if (difference > 0) {
+                for (let i = 0; i < difference; i++) {
+                    setTimeout(()=>{
+                        checks[curPage + i - 1].checked = true;
+                    }, timePerPage * i);
+                }
+            } else {
+                let j = 0;
+                for (let i = -difference - 1; i >= 0; i--) {
+                    setTimeout(() => {
+                        checks[num - 1 + i].checked = false;
+                    }, timePerPage * j);
+                    console.log(timePerPage * j);
+                    j++;
+                }
+            }
+        }
+    </script>
+
+
+    <!-- plyr.io player for podcast -->
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3/dist/plyr.polyfilled.js"></script>
+
+    <script>
+        const player = new Plyr('#player');
     </script>
     
 </body>

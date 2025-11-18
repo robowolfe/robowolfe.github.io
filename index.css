@@ -4,6 +4,8 @@
     --white:#FFFDF3;
     --purple:#7c72a0;
     --blue:#52b4f6;
+
+    --text-shadow: 0 0 0.125em rgba(37, 48, 49, 0.3);
 }
 
 @font-face {
@@ -39,6 +41,10 @@
     font-family: 'NoticiaText', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    text-shadow: var(--text-shadow);
+}
+
 
 
 /* body {
@@ -56,3 +62,39 @@
     pointer-events: none;
     user-select: none;
 } */
+
+
+.hr {
+    width:100%;
+    display:flex;
+    align-items: center;
+    gap:0.5rem;
+    font-weight:600;
+    /* text-transform: uppercase; */
+    font-size:0.75em;
+    margin-block:0.5rem;
+    line-height: 0.8;
+}
+.hr::before {
+    content:'';
+    display:block;
+    width:100%;
+    height:0.1em;
+    background:var(--blue);
+    margin:0.6em 0 0.4em 0;
+    box-shadow: var(--text-shadow);
+}
+.hr::after {
+    content:'';
+    display:block;
+    width:100%;
+    height:0.1em;
+    background:var(--blue);
+    box-shadow: var(--text-shadow);
+    margin:0.6em 0 0.4em 0;
+}
+
+
+ul {
+    padding-left: 1.5rem;
+}
