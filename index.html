@@ -12,6 +12,12 @@
 </head>
 <body>
     <style>
+        .text-fit h3 {
+            font-size:1.5em;
+        }
+    </style>
+
+    <style>
         #cover {
             font-size:2vw;
             font-size:clamp(2rem, 5vw, 3.1rem);
@@ -32,6 +38,18 @@
             margin-top:1rem;
             font-size:clamp(1.5rem, 1vw, 2rem);
             opacity:0.8;
+            line-height:1.2;
+        }
+    </style>
+
+    <style>
+        button {
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size:1rem;
+            text-shadow: var(--text-shadow);
         }
     </style>
 
@@ -42,13 +60,17 @@
         }
     </style>
 
+    <style>
+        .text-fit {
+            width:100%;
+            height:100%;
+        }
+    </style>
+
     <div class="book">
-        <input type="checkbox" id="c1" autocomplete="off">
-        <input type="checkbox" id="c2" autocomplete="off">
-        <input type="checkbox" id="c3" autocomplete="off">
+
         <div id="cover">
             <!-- Page 1 Left -->
-            <!-- <img src="https://images.pexels.com/photos/7214434/pexels-photo-7214434.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
             <header>
                 <h1>
                 <div class="crea">Creation</div>
@@ -59,43 +81,44 @@
             </header>
         </div>
         <div class="flip-book">
-            <div class="flip" id="p1">
+            <div class="flip">
                 <!-- Page 2 Left -->
                 <div class="back">
                     <h2>How the <span style="color:var(--purple)">Bible</span> Comes to Us</h2>
-                    <!-- <img src="https://images.pexels.com/photos/1114797/pexels-photo-1114797.jpeg?cs=srgb&dl=pexels-angele-j-1114797.jpg&fm=jpg" alt=""> -->
-                    <label for="c1" class="back-btn">Before</label>
+                    The Bible comes to us in two ways, from God through human authors, and over time as a unified story.
+                    <label class="back-btn">before</label>
                 </div>
                 <!-- Page 1 Right -->
                 <div class="front">
                     <h2>Table of Contents:</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!
-
-                        <ul>
-                            <li><button onclick="flipTo(2)">How the Bible Comes to Us</button></li>
-                        </ul>
-                        <button onclick="flipTo(2)">Go to 2</button>
-                        <button onclick="flipTo(3)">Go to 3</button>
-                    </p>
-                    <label for="c1" class="next-btn">NEXT</label>
+                    <ul>
+                        <li><button onclick="flipTo(2)">How the Bible Comes to Us</button></li>
+                        <li><button onclick="flipTo(3)">Podcast</button></li>
+                    </ul>
+                    <label class="next-btn">next</label>
                 </div>
             </div>
 
-            <div class="flip" id="p2">
+            <div class="flip">
                 <!-- Page 3 Left -->
                 <div class="back">
-                    <!-- <img src="https://images.pexels.com/photos/1998630/pexels-photo-1998630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""> -->
-                    <label for="c2" class="back-btn">Before</label>
+                    <div class="text-fit">
+                        <h3>Over time in the form of a <span style="color:var(--purple)">unified</span> story.</h3>
+                        I just wrote about the Bible having many writers and one Originator, and this same idea of many and one applies to the main story of the Bible as well. Although each book or section of the Bible was written down by a different person and may have different themes or stories, an overarching narrative encompasses the whole of the Bible. This comes from the fact that there is only one Author, one main Person from who the entire Bible was created.
+                    </div>
+                    <label class="back-btn">before</label>
                 </div>
                 <!-- Page 2 Right -->
                 <div class="front">
-                    <h2>Question 2</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!</p>
-                    <label for="c2" class="next-btn">NEXT</label>
+                    <div class="text-fit">
+                        <h3>From <span style="color:var(--purple)">God</span> via human authors.</h3>
+                        The Bible is both a divine book and a human book; this means that both God and man had their part in writing down the words. So, an obvious question arises: “Who is the author of the Bible?” However, we first need to define our terms, what does “author” really mean? I like this definition from Merriam Webster Dictionary: “1. the writer of a literary work (such as a book).” Just looking at that definition we can conclude that humans are the author of the Bible, right? Well, not exactly, “2. a. one that originates or creates something,” this sense of the definition describes God’s role in the creation of the Bible, and in fact, the next definition is: “2. b. capitalized : GOD.” I think Merriam Webster has the perfect definition of author. It shows that both the physical writer and the originator have a part in being the author, but ultimately, it is God who authored the Bible in its fullness. “All Scripture is God-breathed…” (2 Timothy 3:16) and therefore, the Bible’s words are God’s words, they come from Him through the hands of His chosen scribes. The Bible isn’t some history book with a bunch of authors; it’s a book with one Author (Originator) and many penmen (writers).
+                    </div>
+                    <label class="next-btn">next</label>
                 </div>
             </div>
             
-            <div class="flip" id="p3">
+            <div class="flip">
                 <!-- Page 3 Right -->
                 <div class="front">
                     <h2>Podcast</h2>
@@ -157,6 +180,77 @@
     <script>
         const player = new Plyr('#player');
     </script>
+
+
+    <!-- stolen from https://www.npmjs.com/package/textfit <3 -->
+    <!-- fits text to each book page -->
+    <script src="https://cdn.jsdelivr.net/npm/textfit@2.4.0/textFit.min.js"></script>
+
+    <script>
+        window.addEventListener('resize', () => {
+            textFit(document.getElementsByClassName('text-fit'), {minFontSize:10, maxFontSize: 16})
+        })
+        textFit(document.getElementsByClassName('text-fit'), {minFontSize:10, maxFontSize: 16})
+    </script>
+
+
+
+    <!-- script to generate styles and functionality to each page of the book -->
+     <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const book = document.querySelector('.book');
+  if (!book) return;
+  const flipBook = book.querySelector('.flip-book');
+  if (!flipBook) return;
+
+  const flips = Array.from(flipBook.querySelectorAll('.flip'));
+  const total = flips.length;
+
+  // Create a <style> element that will contain ONLY per-page rules
+  const styleEl = document.createElement('style');
+  styleEl.id = 'auto-page-styles';
+
+  let css = '/* auto-generated per-page rules (do not edit) */\n';
+
+  // Create checkboxes and per-page rules, assign ids to .flip elements
+  flips.forEach((flipEl, idx) => {
+    const pageNum = idx + 1;
+
+    // assign id pN to the flip
+    flipEl.id = `p${pageNum}`;
+
+    // create checkbox input (visually-hidden handled by your CSS)
+    const cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.id = `c${pageNum}`;
+    cb.autocomplete = 'off';
+    // mark generated if you like (optional)
+    cb.setAttribute('data-generated', 'true');
+
+    // Insert each checkbox into .book before .flip-book so the sibling selector works:
+    // #cN:checked ~ .flip-book #pN { ... }
+    book.insertBefore(cb, flipBook);
+
+    // initial stacking: keep same pattern as your original where p1 is top-most
+    // p1 -> z-index = total, pN -> 1
+    const zInitial = total - idx;
+    css += `#p${pageNum} { z-index: ${zInitial}; }\n`;
+
+    // :checked rule to flip the page and set final z-index (mirrors your original)
+    css += `#c${pageNum}:checked ~ .flip-book #p${pageNum} { transform: rotateY(-180deg); z-index: ${pageNum}; }\n`;
+
+    // update label buttons inside the flip to target this page's checkbox
+    // .next-btn typically flips this page (same as your markup). .back-btn likewise.
+    const nextLabel = flipEl.querySelector('.next-btn');
+    const backLabel = flipEl.querySelector('.back-btn');
+    if (nextLabel) nextLabel.setAttribute('for', `c${pageNum}`);
+    if (backLabel) backLabel.setAttribute('for', `c${pageNum}`);
+  });
+
+  styleEl.appendChild(document.createTextNode(css));
+  document.head.appendChild(styleEl);
+});
+</script>
     
 </body>
 </html>

@@ -78,7 +78,7 @@ img {
 
 p {
     font-size: 1rem;
-    line-height: 1.15;
+    line-height: 1.33;
 }
 
 .front {
@@ -91,6 +91,10 @@ p {
     box-sizing: border-box;
     padding: 1rem 2rem;
     box-shadow: inset 15px -2px 40px 0px rgba(0,0,0,0.15), inset 2px 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+.front:not(:has(h2, h3, h4, h5, h6)) {
+  padding-block:1.75rem;
 }
 
 .back {
@@ -119,27 +123,4 @@ p {
     bottom: 1rem;
     left: 1rem;
     cursor: pointer;
-}
-
-#p1 {
-    z-index: 3;
-}
-#p2 {
-    z-index: 2;
-}
-#p3 {
-    z-index: 1;
-}
-
-#c1:checked ~ .flip-book #p1 {
-    transform: rotateY(-180deg);
-    z-index: 1;
-}
-#c2:checked ~ .flip-book #p2 {
-    transform: rotateY(-180deg);
-    z-index: 2;
-}
-#c3:checked ~ .flip-book #p3 {
-    transform: rotateY(-180deg);
-    z-index: 3;
 }
