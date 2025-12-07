@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chart | Digital Portfolio</title>
+    <link rel="stylesheet" href="../../public/css/index.css">
+    <!-- <link rel="stylesheet" href="../../public/css/flipbook.css"> -->
+
+    <link rel="stylesheet" href="../../public/css/pylr.css">
+</head>
+<body>
+    <style>
+        .text-fit h3 {
+            font-size:1.5em;
+        }
+
+        body {
+            background:var(--white)
+        }
+    </style>
+
+    <style>
+        #cover {
+            font-size:2vw;
+            font-size:clamp(2rem, 5vw, 3.1rem);
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            line-height: 1;
+            margin-bottom:2rem;
+        }
+        #cover header {
+            margin-top:2rem;
+        }
+        #cover h1 {
+            font-size:inherit;
+        }
+        #cover p {
+            margin-top:1rem;
+            font-size:clamp(1.5rem, 1vw, 2rem);
+            opacity:0.8;
+            line-height:1.2;
+        }
+    </style>
+
+    <style>
+        #body {
+            max-width:120ch;
+            margin-inline:auto;
+            padding-bottom:2rem;
+        }
+
+        .toc {
+            padding:3rem 2rem 1rem 2rem;
+        }
+        .content {
+            display:flex;
+            flex-direction: column;
+            gap:1rem;
+            padding-inline:2rem;
+        }
+    </style>
+
+    <style>
+        button {
+            background: none;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            font-size:1rem;
+            text-shadow: var(--text-shadow);
+        }
+    </style>
+
+    <style>
+        h2 {
+            font-size:2.5rem;
+            text-wrap: balance;
+        }
+    </style>
+
+    <style>
+        .row {
+            display:grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .row .cell:first-child {
+            font-weight: bold;
+        }
+        .row.look-b .cell:not(:first-child),
+        .row.look-f .cell:not(:first-child),
+        .sources .cell:not(:first-child) {
+            grid-column: 2 / 6;
+        }
+        .row.header {
+            font-size:1.5em;
+        }
+        .row.header .cell {
+            grid-column: 1 / 6;
+        }
+
+        .row.grid-header {
+            color:var(--purple);
+            position:sticky;
+            top:0;
+            background:var(--white);
+            border-bottom:1px solid var(--black);
+        }
+        .row.grid-header .cell {
+            font-weight:bold;
+        }
+
+        .row .cell {
+            padding:0.25rem 0.5rem;
+        }
+    </style>
+
+    <style>
+        .row {
+            border-top:1px solid var(--black);
+        }
+        .row .cell {
+            border-left:1px solid var(--black);
+        }
+        .row .cell:last-child {
+            border-right:1px solid var(--black);
+        }
+        .row:last-child {
+            border-bottom:1px solid var(--black);
+        }
+    </style>
+
+    <div id="cover">
+        <header>
+            <h1>
+            <div class="crea">Creation</div>
+            <div class="hr">to</div>
+            <div class="new-crea">New Creation</div>
+            </h1>
+            <p>digital portfolio</p>
+        </header>
+    </div>
+
+    <div id="body">
+
+<div class="row grid-header"><div class="cell">Book</div><div class="cell">Key Chapters</div><div class="cell">Main Characters</div><div class="cell">Main Events</div><div class="cell">Key Themes</div></div>
+<div class="row header"><div class="cell">Pentateuch</div></div>
+<div class="row"><div class="cell">Genesis</div><div class="cell">1-3, 6-8, 11, 12, 22, 27, 43-46</div><div class="cell">God, Adam, Eve, Noah,  Abram/Abraham, Isaac, Jacob</div><div class="cell">Creation, the Fall, the Flood, Covenant with Abram/Abraham, Sacrifice of Isaac, Jacob getting the birthright, Joseph in Egypt</div><div class="cell">God’s providence/sovereignty in everything, sin and judgement, mercy, covenants to the faithful</div></div>
+<div class="row"><div class="cell">Exodus</div><div class="cell">1-3, 7-12, 14, 16-17, 20, 31-34, 40</div><div class="cell">Moses, Pharaoh, Israel (I think this counts), Aaron</div><div class="cell">Plagues, Exodus, Crossing the Red Sea, Mana from Heaven and Water from stone, Creation of the Ten Commandments, Golden Calf, The Tabernacle</div><div class="cell">God keeping his promises/covenants, God’s presence and care over His people, His mercy upon Israel</div></div>
+<div class="row"><div class="cell">Leviticus</div><div class="cell">8, 10, 16, 19, 23</div><div class="cell">Moses, Aaron, Aaron’s sons, God</div><div class="cell">Explanations of the laws, Consecration of Aaron’s sons, Nadab and Abihu being smitten by God, The Day of Atonement</div><div class="cell">God’s holiness, God’s power, Loving each other and God, Punishments for sin and the blessings of not</div></div>
+<div class="row"><div class="cell">Numbers</div><div class="cell">1-4, 7, 13, 20, 22-24, 26, 31, 33</div><div class="cell">Moses, Joshua, Balaam</div><div class="cell">Censuses, The duties of certain tribes, spies sent to Canaan, 40 years in the wilderness, Balaam’s Oracles, Israel defeats the Midianites</div><div class="cell">The fulfillment of God’s promise to Abraham (God keeps His promises, God is with Israel), God’s jealousy for His glory, God’s mercy</div></div>
+<div class="row"><div class="cell">Deuteronomy</div><div class="cell">1-2, 4, 5-6, 11, 28-30, 31, 32-34</div><div class="cell">Moses, Joshua, God</div><div class="cell">Israel wondering in the wilderness for 40 years, Moses’ messages to Israel, Commandments, Moses’s song, Moses’ death</div><div class="cell">God’s love for Israel, God’s need for obedience, God’s mercy (seeing this one a lot)</div></div>
+<div class="row look-b"><div class="cell">Looking Down</div><div class="cell">The Pentateuch covers the start of time from Adam and Eve to the story of Israel in the wilderness about to claim the promised land. It contains 3 covenants about and to God’s chosen people, promising that He will be with them and make them a great nation for His glory. It starts with perfect creation, and it’s process of no longer being such (Genesis), the captivity that comes through sin entering the world and God’s mercy to protect His people (Exodus), God’s need for obedience, perfection, and holiness in His people (Leviticus, Deuteronomy), and also the fact that God keeps His covenants (Numbers).</div></div>
+<div class="row look-f"><div class="cell">Looking Forward</div><div class="cell">It shows the human need for a Savior. God’s chosen people keep trying to rebel against Him at almost every moment and there is nothing a mere human could do to fix that. It also show’s God’s grace and love towards us that He would “put up” with us for so long.</div></div>
+<div class="row sources"><div class="cell">Sources</div><div class="cell">esv.org, my study Bible</div></div>
+
+<div class="row header"><div class="cell">Historical Books</div></div>
+<!-- <div class="row"><div class="cell">Book</div><div class="cell">Key Chapters</div><div class="cell">Main Characters</div><div class="cell">Main Events</div><div class="cell">Key Themes</div></div> -->
+<div class="row"><div class="cell">Joshua</div><div class="cell">1, 2, 6, 8, 13-15, 23-24</div><div class="cell">Joshua, Rahab</div><div class="cell">Israel conquers Jericho, loss and win against Ai, division of the land, </div><div class="cell">Importance of obedience to God, unity, sovereignty of God, faithfulness</div></div>
+<div class="row"><div class="cell">Judges</div><div class="cell">1-2, 4, 7, 9, 13-16, 20</div><div class="cell">Israel, Deborah, Gideon, Samson, Samuel</div><div class="cell">Canaanite defeat, Gideon defeats Midianites, Samson’s life, Birth of Samuel</div><div class="cell">Human rebellion, God’s compassion, selfishness</div></div>
+<div class="row"><div class="cell">Ruth</div><div class="cell">2-4</div><div class="cell">Naomi, Ruth, Boaz</div><div class="cell">Naomi’s family dying, Ruth in Boaz’s field, Ruth and Boaz marry</div><div class="cell">Hesed Love, kindness, redemption, God’s sovereignty </div></div>
+<div class="row"><div class="cell">1-2 Samuel</div><div class="cell">1st: 6, 8-10, 15-17, 19, 24, 29-31<br>2nd: 1-2, 5, 7-8, 11-12, 22-24</div><div class="cell">Samuel, Saul, David, the rest of the Kings of Israel</div><div class="cell">Saul becomes king, David’s anointing, David and Goliath, David becomes king, Davidic covenant, David’s adultery</div><div class="cell">God as the true King, God’s providence, God’s will, Davidic covenant</div></div>
+<div class="row"><div class="cell">1-2 Kings</div><div class="cell">1st: 1-3, 6, 8, 11, 22<br>2nd: 9-10, 12, 17, 22-25</div><div class="cell">Solomon, Jeroboam, Elijah, Moab, Elisha, Isaiah, Hezekiah, Josiah</div><div class="cell">Solomon anointed king, building of the Temple</div><div class="cell">God’s faithfulness, human unfaithfulness, consequences, God punishes sin</div></div>
+<div class="row"><div class="cell">1-2 Chronicles</div><div class="cell">1st: 11-12, 16, 18<br>2nd: 5, 7-8, 12, 24, 30</div><div class="cell">David, Solomon, the rest of the Kings of Israel</div><div class="cell">David anointed king, the Ark returned to Israel, Davidic covenant, defeat of the pagan nations, divisions of Israel, the Temple</div><div class="cell">The Davidic covenant, God being with the Kings, importance of the genealogies</div></div>
+<div class="row"><div class="cell">Ezra</div><div class="cell">3-5, 9-10</div><div class="cell">Cyrus, Ezra</div><div class="cell">Rebuilding the Alter/Temple, calling out those who sin</div><div class="cell">God’s faithfulness, providence, importance of worship, human fallenness</div></div>
+<div class="row"><div class="cell">Nehemiah</div><div class="cell">1-2, 4-5, 8-9, 11-12</div><div class="cell">Nehemiah, Ezra, those opposed to the rebuilding of the Temple</div><div class="cell">Rebuilding of the Temple (again), stopping of opposition, rebuking of Israel</div><div class="cell">God listens, protection, mercy, opposition to the work of God</div></div>
+<div class="row"><div class="cell">Esther</div><div class="cell">2-4, 7-9</div><div class="cell">Esther, Mordecai, Haman, Xerxes I</div><div class="cell">Esther chosen as Queen, Haman is hanged, Jews saved</div><div class="cell">Providence, responsibility, power corrupts</div></div>
+<div class="row look-b"><div class="cell">Looking Back</div><div class="cell">They also show the way that God works in and through people for His will and His glory, that sin does not go unpunished, and that God has compassion on those who sin and repent. They continue the story of God’s chosen people throughout time, showing the fallenness and the tribulations that happened to them as a nation.</div></div>
+<div class="row look-f"><div class="cell">Looking Forward</div><div class="cell">These books continue setting up and showing humanity’s need for the Savior because of Israel’s continual and reoccurring sin, and they contain the genealogies that are fulfilled through Christ. </div></div>
+<div class="row sources"><div class="cell">Sources</div><div class="cell">My study Bible</div></div>
+
+<div class="row header"><div class="cell">Wisdom Literature</div></div>
+<!-- <div class="row"><div class="cell">Book</div><div class="cell">Key Chapters</div><div class="cell">Main Characters</div><div class="cell">Main Events</div><div class="cell">Key Themes</div></div> -->
+<div class="row"><div class="cell">Job</div><div class="cell">1-3, 8, 10, 12-13, 19, 21, 23-24, 31, 38, 42</div><div class="cell">Job, Satan, God, Eliphaz, Zophar, Bildad, Elihu</div><div class="cell">Job’s family and possessions taken away, Job’s doubts and being rebuked, God’s answer</div><div class="cell">God’s goodness, importance of trials, bad things happen to good and blameless people</div></div>
+<div class="row"><div class="cell">Psalms</div><div class="cell">1, 8, 9, 12, 13, 20-21, 23, 30, 37, 78, 81, 93, 110, 119, 145</div><div class="cell">Psalmist, David</div><div class="cell">N/A – a collection of songs and prayers</div><div class="cell">Importance of worship, thanksgiving, monotheism, forgiveness, grace</div></div>
+<div class="row"><div class="cell">Proverbs</div><div class="cell">1, 6, 10, 18-19, 22-24</div><div class="cell">Solomon</div><div class="cell">N/A – wisdom passages</div><div class="cell">Biblical wisdom, relationships, God’s will</div></div>
+<div class="row"><div class="cell">Ecclesiastes </div><div class="cell">1-3, 7-8, 12</div><div class="cell">“the Preacher” (Solomon)</div><div class="cell">N/A – practically a sermon</div><div class="cell">The fall/sin/death, fear of God, work</div></div>
+<div class="row"><div class="cell">Song of Solomon</div><div class="cell">1, 3, 5-6, 8</div><div class="cell">The young man and woman</div><div class="cell">Dreams/wants, admirations, their marriage</div><div class="cell">Marriage, love, sexual purity, </div></div>
+<div class="row look-b"><div class="cell">Looking Back</div><div class="cell">It provides wisdom on how to live a Godly lifestyle, almost a contrast to the historical books about Israel and everything not to do. It also shows the intention and gives some of the God’s reasoning behind the laws given to Israel as well.</div></div>
+<div class="row look-f"><div class="cell">Looking Forward</div><div class="cell">It general, points to the fact that we will never follow all the wisdom in these books, and that we need Someone who can. Directly, multiple Psalms prophecy to Christ and Ecclesiastes shows the fallenness of the world and the need for Christ to mend it. </div></div>
+<div class="row sources"><div class="cell">Sources</div><div class="cell">My study Bible</div></div>
+
+<div class="row header"><div class="cell">Prophetic Books</div></div>
+<!-- <div class="row"><div class="cell">Book</div><div class="cell">Key Chapters</div><div class="cell">Main Characters</div><div class="cell">Main Events</div><div class="cell">Key Themes</div></div> -->
+<div class="row"><div class="cell">Isaiah</div><div class="cell">1-3, 6, 9, 12, 22, 24-25, 27-29, 32, 34, 41, 43, 50-52, 54-56, 60-66</div><div class="cell">Isaiah, God, Cyrus, Hezekiah</div><div class="cell">The judgment by and to the nations, prophesies of Christ, the oracles to different nations, Israel’s rebellion and God’s grace</div><div class="cell">God’s holiness, providence, judgment, and wrath</div></div>
+<div class="row"><div class="cell">Jeremiah</div><div class="cell">1-2, 5, 10-11, 15, 17, 21, 25, 31, 33, 39-40, 46, 52</div><div class="cell">Jeremiah, God, Nebuchadnezzar</div><div class="cell">Jeremiah’s call, Israel’s sin and punishment, the promise of the Seed of David, the false prophets, judgment of the nations</div><div class="cell">God’s relationship with us, human sin, forgiveness through Christ, God’s providence and plan for humanity</div></div>
+<div class="row"><div class="cell">Lamentations</div><div class="cell">1-3, 5</div><div class="cell">God</div><div class="cell">Jerusalem’s destruction and punishment, God restores Israel</div><div class="cell">God’s judgment, forgiveness, mercy, our relationship with God</div></div>
+<div class="row"><div class="cell">Ezekiel</div><div class="cell">1-4, 7, 10-12, 15-16, 21, 24, 29, 34, 37, 40-43</div><div class="cell">Ezekiel, God, Israel</div><div class="cell">Ezekiel’s call, judgment against idolatry, Israel and Egypt’s destruction, the army from bones, the Temple restoration</div><div class="cell">Holiness, God’s supremacy, judgment of sin, God’s love</div></div>
+<div class="row"><div class="cell">Daniel</div><div class="cell">1-6, 9, 12</div><div class="cell">Daniel, Daniel’s friends, Nebuchadnezzar</div><div class="cell">Daniel and his friends taken to Babylon, don’t bow to the statue of Nebuchadnezzar, are thrown in the furnace, the lions’ den</div><div class="cell">God’s sovereignty, faithfulness, God rules, God’s providence</div></div>
+<div class="row"><div class="cell">Hosea</div><div class="cell">1-6, 9, 11, 13-14</div><div class="cell">Hosea, Gomer, Israel</div><div class="cell">Hosea marries a whore, Israel is punished for their sins, God restores Israel</div><div class="cell">The sin of idolatry, God’s holiness, compassion, and sovereignty</div></div>
+<div class="row"><div class="cell">Joel</div><div class="cell">1-3</div><div class="cell">Joel, Judah, God</div><div class="cell">Locust plague, call of repentance, judgment of the nations</div><div class="cell">Repentance, the Judgment, the Day of the Lord</div></div>
+<div class="row"><div class="cell">Amos</div><div class="cell">1-3, 5, 7-9</div><div class="cell">Amos, Israel, God</div><div class="cell">God’s judgment on Israel and Judah, Israel turning from God, Amos’s visions, Israel’s destruction</div><div class="cell">God’s supremacy, anti-hypocrisy, God’s judgment, but love for Israel</div></div>
+<div class="row"><div class="cell">Obadiah</div><div class="cell">1 (no duh)</div><div class="cell">Obadiah</div><div class="cell">Announcement of the Judgment of Edom, the promise of the restoration of Israel</div><div class="cell">Salvation, judgment, God’s justice, deliverance for God’s people</div></div>
+<div class="row"><div class="cell">Jonah</div><div class="cell">1-4</div><div class="cell">Jonah, God, Ninevites</div><div class="cell">Jonah’s calling, resistance, compliance, and angry prayer</div><div class="cell">Obedience, compassion, God’s sovereignty, repentance</div></div>
+<div class="row"><div class="cell">Micah</div><div class="cell">1-2, 4-5</div><div class="cell">Micah, God</div><div class="cell">Judgment on Israel and Judah, prophesy of Christ, restoration of Israel</div><div class="cell">Judgment, forgiveness, forgiveness</div></div>
+<div class="row"><div class="cell">Nahum</div><div class="cell">1-3</div><div class="cell">Nahum, God</div><div class="cell">Announcement of the coming judgment of Nineveh</div><div class="cell">Destruction of sinners, God is a jealous God, judgment</div></div>
+<div class="row"><div class="cell">Habakkuk</div><div class="cell">1-3</div><div class="cell">Habakkuk, God</div><div class="cell">Habakkuk complains, God responds (x2), Habakkuk praises God</div><div class="cell">God’s sovereignty, God will punish sin, faith saves</div></div>
+<div class="row"><div class="cell">Zephaniah</div><div class="cell">1-3</div><div class="cell">Zephaniah, God</div><div class="cell">Announcing the judgment of the nations, but also a promise of salvation</div><div class="cell">Judgment of Judah, the Day of the Lord, grace, individual salvation</div></div>
+<div class="row"><div class="cell">Haggai</div><div class="cell">1-2</div><div class="cell">Haggai, God</div><div class="cell">Rebuilding the Temple, the coming glory of the future Temple</div><div class="cell">Restoration, God’s sovereignty, the prophesies are God’s Word</div></div>
+<div class="row"><div class="cell">Zechariah</div><div class="cell">1, 3, 7, 8-10, 12-14</div><div class="cell">Zechariah, Joshua</div><div class="cell">Zechariah and Joshua’s visions, the promise of Christ and Israel being restored</div><div class="cell">Repentance, Christ’s eventual coming, God’s judgment and triumph</div></div>
+<div class="row"><div class="cell">Malachi</div><div class="cell">1-4</div><div class="cell">Malachi, God</div><div class="cell">Criticism of the sin in Israel, promise of the Day of the Lord</div><div class="cell">Israel must remember their covenant with God, judgment on those who don’t</div></div>
+<div class="row look-b"><div class="cell">Looking Back</div><div class="cell">This section of the Bible keeps developing the story of Israel, showing more of their sin and the way that God continually shows His grace to them by sending prophets to correct them and bring them back to Him. The Prophets also quote a lot of law and historical events.</div></div>
+<div class="row look-f"><div class="cell">Looking Forward</div><div class="cell">The Prophets point directly to the Messiah and the New Covenant (especially in Jeremiah). The restoration of Israel back to their original relationship with God. They show the need for One who can save us from the sins we cannot escape. </div></div>
+<div class="row sources"><div class="cell">Sources</div><div class="cell">My study Bible</div></div>
+    
+<div class="row header"><div class="cell">Gospels</div></div>
+<!-- <div class="row"><div class="cell">Book</div><div class="cell">Key Chapters</div><div class="cell">Main Characters</div><div class="cell">Main Events</div><div class="cell">Key Themes</div></div> -->
+<div class="row"><div class="cell">Matthew</div><div class="cell">1, 3-5, 7, 10, 13-14, 16-17, 20-21, 24, 26-28</div><div class="cell">Jesus, the Disciples, the Pharisees</div><div class="cell">The genealogy of Jesus, Jesus’s birth, Jesus’s ministry / parables / miracles, Jesus’s foretelling and fulfilling His death and resurrection</div><div class="cell">Jesus is the fulfillment of the prophesies, salvation, the church being built / the Great Commission</div></div>
+<div class="row"><div class="cell">Mark </div><div class="cell">1, 4-6, 8-9, 11, 14-16</div><div class="cell">Jesus, John the Baptist, the Disciples, the Pharisees</div><div class="cell">Jesus’s baptism, Jesus calls the Disciples, lots of Jesus’s miracles and parables, Jesus’s foretelling and fulfilling His death and resurrection, Jesus’ ascension</div><div class="cell">Jesus is both fully man and fully God, Jesus must suffer, God calls all people to Himself, the works of Jesus, discipleship</div></div>
+<div class="row"><div class="cell">Luke</div><div class="cell">1-4, 6, 9, 11-12, 15, 17, 19-20, 22-24</div><div class="cell">Jesus, Mary, Joseph, John the Baptist, the Dsciples, the Pharisees</div><div class="cell">John the Baptist and Jesus’s birth, Jesus’s baptism, Satan’s tempting, Jesus’s ministry, Jesus’ death, resurrection, and ascension</div><div class="cell">The Gospel is for all, already/not yet kingdom, God’s sovereignty, stewardship, the Holy spirit</div></div>
+<div class="row"><div class="cell">John</div><div class="cell">1, 3, 5-6, 8, 11, 13-14, 17-18, 19-21</div><div class="cell">Jesus, the Disciples, the Pharisees</div><div class="cell">Jesus calls the Disciples, Jesus’s ministry / miracles / parables, Jesus’ death, resurrection, and ascension </div><div class="cell">Jesus is God, Jesus is the Messiah, the Trinity, salvation/eternal life, the Great Commission</div></div>
+<div class="row look-b"><div class="cell">Looking Back</div><div class="cell">This section is the fulfillment of the Prophetical books and tells of the One who did what Israel could not. It is the culmination of the entire Old Testament as the climax of the New Testament.</div></div>
+<div class="row look-f"><div class="cell">Looking Forward</div><div class="cell">These are the stories of Christ: His birth, ministry, transfiguration, death, and resurrection. </div></div>
+<div class="row sources"><div class="cell">Sources</div><div class="cell">My study Bible</div></div>
+
+<div class="row header"><div class="cell">Acts</div></div>
+<!-- <div class="row"><div class="cell">Book</div><div class="cell">Key Chapters</div><div class="cell">Main Characters</div><div class="cell">Main Events</div><div class="cell">Key Themes</div></div> -->
+<div class="row"><div class="cell">Acts</div><div class="cell">1-2, 4-5, 8-9, 13, 16, 18, 21, 28</div><div class="cell">The Apostles and the early Church, the Holy Spirit, Stephen, Saul/Paul, Barnabas, Timothy, Silas</div><div class="cell">Peter’s sermon at Pentecost, the Apostles arrested and set free x2, Stephen’s stoning, Saul’s conversion, Paul’s many trips to various nations</div><div class="cell">The importance of the church, the Holy Spirit, the Great commission, suffering for Christ, what it means to be a faithful witness, fellowship</div></div>
+<div class="row look-b"><div class="cell">Looking Back</div><div class="cell">This book continues the story directly after Christ, with the early church and their acts. This is the start of the Great Commission, showing the Holy Spirit’s work in the church.</div></div>
+<div class="row look-f"><div class="cell">Looking Forward</div><div class="cell">This is the testimony of those who were with Christ and those who believe. A witness telling the everyone they can about the Christ whom the whole Bible speak about. Debating and explaining Christ’s fulfillment of the Old Testament.</div></div>
+<div class="row sources"><div class="cell">Sources</div><div class="cell">My study Bible</div></div>
+
+<div class="row header"><div class="cell">Epistles</div></div>
+<!-- <div class="row"><div class="cell">Book</div><div class="cell">Key Chapters</div><div class="cell">Main Characters</div><div class="cell">Main Events</div><div class="cell">Key Themes</div></div> -->
+<div class="row"><div class="cell">Romans</div><div class="cell">1-3, 5-6, 8, 10, 12-14, 16</div><div class="cell">Paul, Christ</div><div class="cell">(not really a story book, but it talks about:) Judgment day, Adam’s sin, Christ’s suffering, Israel’s years of unbelief</div><div class="cell">God’s judgment, God’s mercy, human fallenness, salvation by faith through Christ alone, new life in Christ</div></div>
+<div class="row"><div class="cell">1 Corinthians</div><div class="cell">1, 3, 5-6, 7, 9-10, 12-14, 15</div><div class="cell">Paul, the Corinthian church, Christ</div><div class="cell">(again, mostly teaching:) Christ’s death and resurrection, the Apostles’ lives, the Rapture</div><div class="cell">Church unity, importance of the resurrection, idolatry, sexual morality, being a good witness</div></div>
+<div class="row"><div class="cell">2 Corinthians</div><div class="cell">1-6, 9-11, 13</div><div class="cell">Paul, the Corinthian church, Paul’s opposition, Christ</div><div class="cell">Paul is accused as an unbeliever, Paul’s defense, Paul’s teaching about sin</div><div class="cell">Suffering for Christ, endurance, the Holy Spirit, repentance, Judgment Day, New Covenant</div></div>
+<div class="row"><div class="cell">Galatians</div><div class="cell">1-6</div><div class="cell">Paul, the Church of Galatia, Peter, Christ</div><div class="cell">(again, mostly teaching:) Hagar and Sarah</div><div class="cell">The New Covenant, conversion, salvation, justification by faith, the Holy Spirit</div></div>
+<div class="row"><div class="cell">Ephesians</div><div class="cell">1-6</div><div class="cell">Paul, the Churches in Ephesus, Christ</div><div class="cell">Paul’s imprisonment (mostly teaching)</div><div class="cell">The unity of the church, Christians are new people, reconciliation</div></div>
+<div class="row"><div class="cell">Philippians</div><div class="cell">1-4</div><div class="cell">Paul, Timothy, the Philippian church, Epaphroditus, Christ</div><div class="cell">Paul’s imprisonment, Epaphrodidtus’s sickness (mostly teaching)</div><div class="cell">Joy, spiritual progress, suffering, relationships, faith</div></div>
+<div class="row"><div class="cell">Colossians</div><div class="cell">1-4</div><div class="cell">Paul, the Christians in Colossae, Christ</div><div class="cell">(mostly teaching)<br>Paul’s imprisonment</div><div class="cell">Christ’s supremacy, fulfillment of prophesy, spiritual growth</div></div>
+<div class="row"><div class="cell">1 Thessalonians</div><div class="cell">1-5</div><div class="cell">Paul, Silas, Timothy, the Thessalonian church, Christ</div><div class="cell">Christ’s return (mostly teaching / encouragement)</div><div class="cell">The Second Coming, salvation, joy in suffering, holiness</div></div>
+<div class="row"><div class="cell">2 Thessalonians</div><div class="cell">1-3</div><div class="cell">Paul, Silas, Timothy, the Antichrist, Christ</div><div class="cell">Christ’s return (mostly teaching), the Antichrist pulling people to him</div><div class="cell">The Second Coming, the Antichrist, eternal life vs eternal damnation</div></div>
+<div class="row"><div class="cell">1 Timothy</div><div class="cell">1-6</div><div class="cell">Paul, Timothy, church elders, Christ</div><div class="cell">(mostly teaching about how to run a church) Adam and Eve</div><div class="cell">Godliness, the effects of salvation, church leaders</div></div>
+<div class="row"><div class="cell">2 Timothy</div><div class="cell">1-4</div><div class="cell">Paul, Timothy, deserters, Christ</div><div class="cell">(teaching about suffering and trials) Paul’s final days</div><div class="cell">Suffering for the Gospel</div></div>
+<div class="row"><div class="cell">Titus</div><div class="cell">1-3</div><div class="cell">Paul, Titus, Christ</div><div class="cell">(teaching about church organization and works)</div><div class="cell">Faith and works, false teaching, church leaders</div></div>
+<div class="row"><div class="cell">Philemon</div><div class="cell">1</div><div class="cell">Paul, Onesimus, Philemon, Christ</div><div class="cell">Paul meets Onesimus, Onesimus gets saved, Onesimus is sent back to Philemon</div><div class="cell">Reconciliation, love, forgiveness, self-worth</div></div>
+<div class="row"><div class="cell">Hebrews</div><div class="cell">1-6, 8-13</div><div class="cell">Hebrews, Gentile Christians, Melchizedek, Christ</div><div class="cell">OT sacrifices explained, Christ’s sacrifice, wilderness wandering</div><div class="cell">Endurance, Christ’s supremacy, encourage others to hold the faith</div></div>
+<div class="row"><div class="cell">James</div><div class="cell">1-5</div><div class="cell">James, early Christians, Christ</div><div class="cell">(talks about trials) Abraham offering Issac, Rahab and the Spies</div><div class="cell">Christians must live out their faith, trials, obeying God’s Word, importance of faith</div></div>
+<div class="row"><div class="cell">1 Peter</div><div class="cell">1-5</div><div class="cell">Peter, scattered believers, Christ</div><div class="cell">(gives encouragement to the believers) Christ’s suffering, Noah/Flood</div><div class="cell">Encouragement, persecution, Christ is the basis of our faith, faithfulness</div></div>
+<div class="row"><div class="cell">2 Peter</div><div class="cell">1-3</div><div class="cell">Peter, the churches</div><div class="cell">(teaching on false teachers) The Day of the Lord, Noah</div><div class="cell">Grace, false teachers, </div></div>
+<div class="row"><div class="cell">1 John</div><div class="cell">1-5</div><div class="cell">John, Christ, the Antichrist</div><div class="cell">The incarnation, Cain and Abel</div><div class="cell">Obedience, faithfulness, devotion, God overcomes, eternal life</div></div>
+<div class="row"><div class="cell">2 John</div><div class="cell">1</div><div class="cell">John, Christ</div><div class="cell">(again, just a letter:) Jesus’s coming</div><div class="cell">God’s love, obedience to God, eternal rewards</div></div>
+<div class="row"><div class="cell">3 John</div><div class="cell">1</div><div class="cell">John, Gaius, Diotrephes</div><div class="cell">Diotrephes attacking the faith, Gaius’s health</div><div class="cell">Faithfulness, “walking in the truth”</div></div>
+<div class="row"><div class="cell">Jude</div><div class="cell">1</div><div class="cell">Jude, Christ</div><div class="cell">(not really a story book, but it talks about:) Judgment of Sodom and Gomorrah, Judgment Day</div><div class="cell">False teachers, defending the faith, God’s sovereignty, Judgment Day</div></div>
+<div class="row look-b"><div class="cell">Looking Back</div><div class="cell">The Epistles pick up the story of the early church and ministry after Christ’s death and resurrection. They show how both the Gentiles and the Jews became one Church and spread to all the nations. Paul sent many letters to the churches on how to live the Christian life and how to keep unity in the church.</div></div>
+<div class="row look-f"><div class="cell">Looking Forward</div><div class="cell">The Epistles talk about Christ’s first coming and many Epistles point directly to the Second Coming of Christ. They helped the churches keep their minds on Christ and His ministry and help us apply what Christ taught. They serve as major doctrines for us as Christians as we study the Bible and interpret it in context.</div></div>
+<div class="row sources"><div class="cell">Sources</div><div class="cell">My study Bible</div></div>
+
+    </div>
+
+    <!-- plyr.io player for podcast -->
+    <script src="https://cdn.jsdelivr.net/npm/plyr@3/dist/plyr.polyfilled.js"></script>
+
+    <script>
+        const player = new Plyr('#player');
+    </script>
+</body>
+</html>

@@ -40,6 +40,12 @@
             opacity:0.8;
             line-height:1.2;
         }
+        #cover span {
+            margin-top:1rem;
+            font-size:clamp(.75rem, 1vw, 1rem);
+            opacity:0.8;
+            line-height:1.2;
+        }
     </style>
 
     <style>
@@ -67,6 +73,42 @@
         }
     </style>
 
+    <div id="media">
+        Please view this website on a larger screen or click <a href="/basic">here</a>.
+    </div>
+
+    <style>
+        #media {
+            position:fixed;
+            top:0;
+            left:0;
+            width:100vw;
+            height:100vh;
+            display:flex;
+            padding:1rem;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-size:1em;
+            background:var(--black);
+            color:var(--white);
+            z-index:999;
+        }
+
+        .book {
+            display:none;
+        }
+
+        @media screen and (min-width: 900px) {
+            #media {
+                display:none;
+            }
+            .book {
+                display: flex;
+            }
+        }
+    </style>
+
     <div class="book">
 
         <div id="cover">
@@ -78,6 +120,7 @@
                 <div class="new-crea">New Creation</div>
                 </h1>
                 <p>digital portfolio</p>
+                <span>View this in normal website form <a href="/basic">here</a>.</span>
             </header>
         </div>
         <div class="flip-book">
@@ -93,7 +136,9 @@
                     <h2>Table of Contents:</h2>
                     <ul>
                         <li><button onclick="flipTo(2)">How the Bible Comes to Us</button></li>
-                        <li><button onclick="flipTo(3)">Podcast</button></li>
+                        <li><button onclick="flipTo(4)">The Central Theme of the Bible</button></li>
+                        <li><button onclick="flipTo(5)">Tracing the Bible Storyline</button></li>
+                        <li><button onclick="flipTo(7)">Podcast</button></li>
                     </ul>
                     <label class="next-btn">next</label>
                 </div>
@@ -117,12 +162,177 @@
                     <label class="next-btn">next</label>
                 </div>
             </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <h2>What is the central unifying <span style="color:var(--purple)">theme</span> of the Bible storyline?</h2>
+
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <!-- <div class="text-fit">
+                        <h3>From <span style="color:var(--purple)">God</span> via human authors.</h3>
+                        The Bible is both a divine book and a human book; this means that both God and man had their part in writing down the words. So, an obvious question arises: “Who is the author of the Bible?” However, we first need to define our terms, what does “author” really mean? I like this definition from Merriam Webster Dictionary: “1. the writer of a literary work (such as a book).” Just looking at that definition we can conclude that humans are the author of the Bible, right? Well, not exactly, “2. a. one that originates or creates something,” this sense of the definition describes God’s role in the creation of the Bible, and in fact, the next definition is: “2. b. capitalized : GOD.” I think Merriam Webster has the perfect definition of author. It shows that both the physical writer and the originator have a part in being the author, but ultimately, it is God who authored the Bible in its fullness. “All Scripture is God-breathed…” (2 Timothy 3:16) and therefore, the Bible’s words are God’s words, they come from Him through the hands of His chosen scribes. The Bible isn’t some history book with a bunch of authors; it’s a book with one Author (Originator) and many penmen (writers).
+                    </div> -->
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <h2>What are some ways we can <span style="color:var(--purple)">trace</span> the Bible storyline from beginning to end?</h2>
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    In Luke 24 and John 5, Jesus describes how everything written in the Old Testament witnesses of Him and how He has come to fulfill all the prophecies. And in His fulfillment, Jesus will also bring the law to its intended goal (Matthew 5). Not only does Jesus declare this in the Sermon on the Mount, but Peter preaches this in the past tense on the day of Pentecost. Peter tells the crowd how Jesus had fulfilled all that was spoken of Him, pointing to Joel and Psalms specifically. These passages highlight the connection between the Old and the New Testaments: Jesus. From the Fall and the need for Jesus to Revelation and the returning of Jesus the Bible points to a need for a Savior, the Savior. 
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <div class="text-fit">
+                        <h3>B. The Bible storyline and its <span style="color:var(--purple)">four major plot movements</span></h3>
+                        The four major plot movements are Creation, Fall, Redemption, and Restoration. Creation is God’s perfect world where we were made to love, serve, and glorify Him. However, we as humans sinned, breaking a relationship with God and creating the need for Christ. Redemption is God’s saving of our broken relationship with Him and addressing our sin through Christ’s death and resurrection. Finally, restoration is when God recreates that perfect world where we love, serve, and glorify Him, but for eternity in heaven and on a new creation.
+                    </div>
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <div class="text-fit">
+                        <h3>A. The Bible storyline and the <span style="color:var(--purple)">two testaments</span></h3>
+                        In the Old Testament the story for the rest of the Bible is set up: the need for a Savior and the prophesy of Him (as stated in the previous question). The New Testament is the fulfilling of what the Old Testament prophesied of and the promise of a time where we will be with Christ. From Adam being a type of Christ, to the Passover being a representation of Him, Christ is throughout the Bible in places that aren’t as obvious as prophesy or the Gospels. Christ’s coming is the climax of the story, dividing the Biblical account into two parts, anticipation and expounding (CBE 50-51).
+                    </div>
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <div class="text-fit">
+                        <h3>D.</h3>
+                        
+                    </div>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <div class="text-fit">
+                        <h3>C. The Bible storyline and the <span style="color:var(--purple)">six major covenants</span></h3>
+                        There are six covenants in the Bible also help set up the Biblical storyline, but what is a covenant? A covenant is like a contract between God and another party, but with an additional emphasis on a relationship between the two. The first is the Adamic covenant in Genesis 3:15, where Jesus is promised as the seed of Adam and Eve who will crush human sin and reconnect our relationship with God. The next is the Noahic in Genesis 6-9, showing the depravity of the human condition, and the need the Savior mentioned in the Adamic covenant. It also promised that God would never slaughter the whole world with a flood again. The third is the Abrahamic throughout Genesis 12-22, where God promises Abraham to make his children uncountable, turn them into a great nation for His glory, and bless the nations through them. The Mosaic covenant in Exodus 19 builds directly upon the Abrahamic, setting up laws to set Israel apart from other nations and protecting them as God’s chosen people. The Davidic covenant in 2 Samuel 7 sets up the lineage of the spoken Savior in the Adamic, picking the ruler over Israel and promising that The Seed would come through him. Finally, the New Covenant prophesied in Jeremiah 31:31 wraps up the covenants by mending our relationship to God by sending a Savior to come, suffer, and take the punishment for our sin on His shoulders to save us.
+                    </div>
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <h2>How does the Bible <span style="color:var(--purple)">storyline</span> relate to a Biblical <span style="color:var(--purple)">worldview</span>?</h2>
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+            
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <div class="text-fit">
+                        <h3>Creation</h3>
+                        The Bible starts by describing how all things, immaterial and material, come from the direct act of God speaking them into existence (Gen. 1). He created rules about how the world works called creational norms, establishing patterns into the very nature of creation. Because God created all things, He also created humans, but more specifically, He created humans in the image of Himself (Gen. 1:27). We, therefore, must be mirrors of the One who created us, reflecting God in all we do.
+                    </div>
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <div class="text-fit">A worldview is the way that you interpret and comprehend the world around you. A biblical worldview is interpreting and comprehending the world through the lens of the Bible and then applying its principles to the way that you live. As you understand the overarching story of the Bible, you learn how to apply it to your daily life. When problems arise you learn to look to the Bible to understand what to do, and how to glorify God through it all. </div>
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <div class="text-fit">
+                        <h3>Redemption</h3>
+                        This promise of a Seed who will save us from our sins is fulfilled through Christ when He died on the cross. The wrath of God was taken upon Him, covering the cost of the penalty for our sins and giving us a divine grace that we don’t deserve. Through His son, He is now able to bring us back into a relationship with Him, where we can glorify and praise Him forever.
+                    </div>
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <div class="text-fit">
+                        <h3>Fall</h3>
+                        However, we aren’t perfect, and there are times where we aren’t reflecting who God is in His perfection. One of these many times is called the Fall (Gen. 3:1-7), the first time when humanity sinned, cursing all who will come after (Gen 3:16-19). The effects of the Fall alter how we view the world drastically. Because humans are cursed, we now deal with suffering (v19a), pain (v16), and death (v19b). But God also made a promise to us (v15): that He would provide a Savior to bring us back into a loving relationship with Him.
+                    </div>
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <h2>What does it look like to <span style="color:var(--purple)">apply</span> a biblical worldview?</h2>
+                    <a href="ttps://www.youtube.com/watch?v=t7QDGEF-DN0" target="_blank">https://www.youtube.com/watch?v=t7QDGEF-DN0</a><br>
+                    Title: The Man Who Killed Halloween<br>
+                    Creator: Brew<br>
+                    (This video is a documentary of what happened around the infamous story of “The Candy Man”)
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <div class="text-fit">
+                        <h3>Restoration</h3>
+                        Now that He has redeemed the world, He can now restore the world to its former glory, and its glorification of Him. The old order of the world will give way for God’s new creation, where we can reflect God for who He truly is. A perfect creation where there is once again no suffering, no pain, and no death. A world where we live in harmony with Him and with others for eternity.
+                    </div>
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <div class="text-fit">
+                        <h3>Application</h3>
+                        Although this story is one of the most depressing videos I’ve ever watched, it has plenty of lessons we can learn from it. More than anything else, this shows the absolute and irreversible sin that has entered the hearts of man because of the Fall. Even when everything was good and everyone was happy, sin was still scheming in the background, directly affecting those around and related to us. It also shows man’s fallen version of redemption, a justice system that can only punish, not restore: Timothy will never live again, even though “justice was served.” And from another perspective we have the idea of capital punishment, should someone be killed because they have killed, and what qualification does one man have to kill another man for their crime? There is only one answer to these questions and the frightening reality of sin, the ultimate restoration through Christ, the only righteous judge.
+                    </div>
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <div class="text-fit">
+                        <h3>Summary</h3>
+                        At the beginning of this story, a well-known and well-liked churchgoing father took his family out Trick-or-Treating. Everything was good, everyone was happy. However, when they got home one of the children, Timothy, fell limp and died almost instantly while eating a Pixie Stix. Detectives soon found that he was poisoned with enough potassium cyanide to kill two fully grown adults. Upon further investigation, the only suspect found except the father, Ronald Clark. He had just recently taken out two $50k insurance policies on his children. Because of this and plenty of other evidence, he was sentenced to death by electric chair for one count of capital murder and four counts of attempted murder.
+                    </div>
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
+            <div class="flip">
+                <!-- Page 4 Left -->
+                <div class="back">
+                    <label class="back-btn">before</label>
+                </div>
+                <!-- Page 3 Right -->
+                <div class="front">
+                    <label class="next-btn">next</label>
+                </div>
+            </div>
+
             
             <div class="flip">
                 <!-- Page 3 Right -->
                 <div class="front">
                     <h2>Podcast</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus sunt consectetur iusto sint architecto beatae fuga, quasi, repellendus tempora cum eaque? Incidunt modi laudantium fugit nostrum ipsam consectetur. Illum, dolorum!</p>
+                    <p>In this podcast me and my dad go in depth on how the Bible storyline effects us as Christians and how it effects non-believers. We touched on topics like keeping the Creation Mandate while not being directly on the mission field and how Christians should view suffering within a Biblical worldview. These are topics that many Christians and non-believers struggle with, and we were able to answer some of those questions. Enjoy listening!</p>
                     <!-- <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio> -->
                     <audio class="plyr__video-embed" id="player" controls>
                         <source src="./podcast.mp3" type="audio/mp3" />
@@ -225,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
     cb.id = `c${pageNum}`;
     cb.autocomplete = 'off';
     // mark generated if you like (optional)
-    cb.setAttribute('data-generated', 'true');
+    // cb.setAttribute('data-generated', 'true');
 
     // Insert each checkbox into .book before .flip-book so the sibling selector works:
     // #cN:checked ~ .flip-book #pN { ... }

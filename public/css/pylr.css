@@ -8,6 +8,6 @@
     --plyr-audio-controls-background:rgba(0,0,0,0);
     --plyr-audio-control-color:var(--purple);
 
-    --plyr-audio-control-color-hover:var(--teal);
-    --plyr-audio-control-background-hover:var(--black);
+    --plyr-audio-control-color-hover:var(--white);
+    --plyr-audio-control-background-hover:var(--purple);
 }
